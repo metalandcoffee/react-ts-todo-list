@@ -1,9 +1,8 @@
 import './App.css';
-import { ListItemProps } from './components/ListItem';
 import { ToDoList } from './components/ToDoList';
 
 function App() {
-	const data: ListItemProps[] = [
+	const data = [
 		{
 			title: 'Title 1',
 			description: 'Description 1',
