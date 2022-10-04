@@ -1,4 +1,4 @@
-type ListItemProps = {
+export type ListItemProps = {
 	title: string;
 	description: string;
 };
