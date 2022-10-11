@@ -1,24 +1,19 @@
+import { useState } from 'react';
 import './App.css';
 import { ToDoList } from './components/ToDoList';
+import { ListItemProps } from './components/ListItem';
 
 function App() {
-	const data = [
-		{
-			title: 'Title 1',
-			description: 'Description 1',
-		},
-		{
-			title: 'Title 2',
-			description: 'Description 2',
-		},
-		{
-			title: 'Title 3',
-			description: 'Description 3',
-		},
-	];
+	const [task, setTask] = useState('');
+	const [list, setList] = useState<ListItemProps[]>([]);
 	return (
 		<div className='App'>
-			<ToDoList items={data} />
+			<ToDoList
+				list={list}
+				task={task}
+				setTask={setTask}
+				setList={setList}
+			/>
 		</div>
 	);
 }
