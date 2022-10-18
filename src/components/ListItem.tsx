@@ -5,9 +5,10 @@ export type ListItemProps = {
 
 export const ListItem = ({ title, description }: ListItemProps) => {
 	return (
-		<div>
+		<li>
 			<h2>{title}</h2>
-			<div>{description}</div>
-		</div>
+			<span>{description}</span>
+			<input type='checkbox' name='' id='' />
+		</li>
 	);
 };

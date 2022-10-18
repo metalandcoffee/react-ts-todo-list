@@ -1,3 +1,82 @@
+:root {
+	--white: #fff;
+	--black: #1a1818;
+	--purple: #7f367f;
+}
+
+html {
+	font-size: 100%;
+	line-height: 1;
+	color: var(--white);
+	background-color: var(--black);
+}
+
+h1,
+.h1 {
+	font-size: 4.1111111rem;
+	line-height: 5rem;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+}
+h2,
+.h2 {
+	font-size: 2.5555556rem;
+	line-height: 3rem;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+}
+h3,
+.h3 {
+	font-size: 1.6111111rem;
+	line-height: 2rem;
+	margin-top: 1rem;
+	margin-bottom: 0rem;
+}
+h4,
+.h4 {
+	font-size: 1rem;
+	line-height: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 0rem;
+}
+h5,
+.h5 {
+	font-size: 1rem;
+	line-height: 1rem;
+	margin-top: 1rem;
+	margin-bottom: 0rem;
+}
+
 .App {
 	margin: 2rem 0;
+}
+
+ul {
+	padding: 0;
+	list-style: none;
+}
+
+/* List Item */
+li {
+	margin: 0.5rem;
+	padding: 0.5rem;
+	background-color: var(--purple);
+	border-radius: 5px;
+	display: grid;
+	grid-template-areas:
+		'title checkbox'
+		'desc  checkbox';
+}
+
+/* @todo replace with CSS Nesting when supported */
+li > h2 {
+	grid-area: title;
+}
+
+li > span {
+	grid-area: desc;
+}
+
+li > input {
+	grid-area: checkbox;
 }
